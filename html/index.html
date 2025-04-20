@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Menu</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="menu" style="display:none;">
+        <div class="menu-header">
+            <h2>Welcome! Please Order</h2>
+            <button id="close">X</button>
+        </div>
+        <div class="menu-body">
+            <div id="food-items"></div>
+            <div id="cart-panel">
+                <h3>Your Cart</h3>
+                <div id="cart-items"></div>
+                <button id="clear-cart">Clear Cart</button>
+                <div class="cart-summary">
+                    <span>Total:</span>
+                    <span id="cart-total">$0.00</span>
+                </div>
+                <button id="place-order">Place Order</button>
+            </div>
+        </div>
+    </div>
+    <div id="order-list-panel" class="menu-panel" style="display:none;">
+        <button id="close-order-list">✖</button>
+        <div class="order-list-title-row toggle-pill">
+            <div id="panel-toggle">
+                <span class="panel-segment active" data-panel="orders">Order List</span>
+                <span class="panel-segment" data-panel="management">Management Panel</span>
+            </div>
+        </div>
+        <div id="order-list-content" class="orders-body">
+            <!-- Orders will be dynamically inserted here -->
+        </div>
+        <div id="staff-list-content" class="staff-body" style="display:none;">
+            <div class="staff-header-row">
+                <span>Name</span>
+                <span>Rank</span>
+                <span>Status</span>
+            </div>
+            <!-- Staff will be dynamically inserted here -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
